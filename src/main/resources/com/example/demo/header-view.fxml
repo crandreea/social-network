@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ubb.scs.map.controller.HeaderController">
+    <HBox AnchorPane.topAnchor="5.0"
+          AnchorPane.leftAnchor="5.0"
+          AnchorPane.rightAnchor="5.0" style="-fx-border-color: transparent transparent #dbdbdb transparent">
+        <HBox maxHeight="36.0" spacing="10">
+            <ImageView fx:id="homeImage" fitWidth="32.0" fitHeight="32.0" preserveRatio="true"
+                       onMouseClicked="#gotToHome">
+                <Image url="/images/home.png"/>
+            </ImageView>
+            <ImageView fx:id="messagesImage" fitWidth="32.0" fitHeight="32.0" preserveRatio="true"
+                       onMouseClicked="#gotToMessages">
+                <Image url="/images/messages.png"/>
+            </ImageView>
+            <ImageView fitWidth="32.0" fitHeight="32.0" preserveRatio="true">
+
+            </ImageView>
+        </HBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <HBox maxHeight="36.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HELLO," wrappingWidth="60">
+                <font>
+                    <Font name="Baloo Paaji 2 SemiBold" size="18.5"/>
+                </font>
+            </Text>
+            <TextField fx:id="usernameHeaderField" minHeight="29.5" maxHeight="29.5" maxWidth="100.0"
+                       editable="false" focusTraversable="false"
+                       style="-fx-background-color: transparent;
+                      -fx-border-color: transparent;
+                      -fx-focus-color: transparent;">
+                <font>
+                    <Font name="Baloo Paaji 2 SemiBold" size="18.5"/>
+                </font>
+            </TextField>
+        </HBox>
+
+        <Region HBox.hgrow="ALWAYS"/>
+        <HBox maxHeight="36.0" spacing="10">
+            <ImageView fx:id="notificationImage" fitWidth="32.0" fitHeight="32.0" preserveRatio="true"
+                       onMouseClicked="#goToNotification">
+                <Image url="/images/notification.png"/>
+            </ImageView>
+            <ImageView fx:id="profileImage" fitWidth="32.0" fitHeight="32.0" preserveRatio="true"
+                       onMouseClicked="#goToProfile">
+                <Image url="/images/profile.png"/>
+            </ImageView>
+            <ImageView fx:id="logoutImage" fitWidth="32.0" fitHeight="32.0" preserveRatio="true"
+                       onMouseClicked="#gotToLogin">
+                <Image url="/images/logout.png"/>
+            </ImageView>
+        </HBox>
+    </HBox>
+</AnchorPane>

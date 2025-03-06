@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ubb.scs.map.controller.ProfileView"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-image: url(/images/fundal.png)">
+    <fx:include fx:id="header" source="layout-default.fxml"
+                AnchorPane.topAnchor="0.0"
+                AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0"/>
+    <AnchorPane AnchorPane.topAnchor="60.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0">
+        <HBox alignment="CENTER" spacing="100.0" AnchorPane.topAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" >
+            <Region HBox.hgrow="ALWAYS"/>
+            <VBox alignment="CENTER" minHeight="184.0" maxHeight="184.0" maxWidth="140.0"
+                  style="-fx-border-color: lightgrey; -fx-border-radius: 20; -fx-background-radius:20; -fx-background-color: f7f7f7; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 4); -fx-padding: 10px;">
+                <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="/images/profile_picture.png"/>
+                </ImageView>
+                <TextField alignment="CENTER" fx:id="usernameField" editable="false" focusTraversable="false" minHeight="22.0"
+                           style="-fx-background-color: transparent; -fx-border-color: #dbdbdb transparent #dbdbdb transparent; -fx-focus-color: transparent;">
+                    <font>
+                        <Font name="Baloo Paaji 2 SemiBold" size="15.0"/>
+                    </font>
+                </TextField>
+                <HBox alignment="CENTER" minHeight="35.0" maxHeight="35.0" minWidth="150.0">
+                    <Text fill="dimgrey" strokeType="OUTSIDE" strokeWidth="0.0" text="friends:">
+                        <font>
+                            <Font name="Arial Italic" size="15.0"/>
+                        </font>
+                    </Text>
+                    <TextField fx:id="nmbFriendsField" editable="false" focusTraversable="false" maxWidth="30.0"
+                               style="-fx-background-color: transparent; -fx-border-color: transparent;"/>
+                </HBox>
+            </VBox>
+            <VBox spacing="50.0" alignment="CENTER">
+                <HBox>
+                    <VBox alignment="CENTER" minHeight="350.0" maxHeight="350.0" minWidth="500.0"
+                          style="-fx-border-color: lightgrey;-fx-border-radius: 20; -fx-background-radius:20; -fx-background-color: f7f7f7; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 4); -fx-padding: 10px;">
+                        <Text textAlignment="CENTER" strokeType="OUTSIDE" strokeWidth="0.0" text="My  friends">
+                            <font>
+                                <Font name="Baloo Bhai 2 SemiBold" size="17.0"/>
+                            </font>
+                        </Text>
+                        <ListView fx:id="friendsListView" minHeight="250.0" prefWidth="200.0"/>
+
+                    </VBox>
+                    <VBox maxHeight="45.0" maxWidth="58.0"
+                          style="-fx-border-color: lightgrey;-fx-border-radius: 20; -fx-background-radius:20; -fx-background-color: f7f7f7; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 4); -fx-padding: 10px;">
+                        <ImageView fx:id="deleteFriendImage" onMouseClicked="#deleteFriend" fitHeight="40.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/images/cancel.png"/>
+                        </ImageView>
+                    </VBox>
+                </HBox>
+                <HBox>
+                    <VBox alignment="CENTER" minHeight="350.0" maxHeight="350.0" minWidth="500.0"
+                          style="-fx-border-color: lightgrey;-fx-border-radius: 20; -fx-background-radius:20; -fx-background-color: f7f7f7; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 4); -fx-padding: 10px;">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Friend  requests">
+                            <font>
+                                <Font name="Baloo Bhai 2 SemiBold" size="17.0"/>
+                            </font>
+                        </Text>
+                        <ListView fx:id="pendingRequestsListView" minHeight="250.0" prefWidth="200.0"/>
+                    </VBox>
+                    <VBox maxHeight="90.0" maxWidth="58.0"
+                          style="-fx-border-color: lightgrey;-fx-border-radius: 20; -fx-background-radius:20; -fx-background-color: f7f7f7; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 4); -fx-padding: 10px;">
+                        <ImageView fx:id="acceptRequestImage" onMouseClicked="#acceptRequestFriend"  fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/images/accept.png"/>
+                        </ImageView>
+                        <ImageView fx:id="deleteRequestImage" onMouseClicked="#deleteFriend" fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/images/cancel.png"/>
+                        </ImageView>
+                    </VBox>
+                </HBox>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </AnchorPane>
+</AnchorPane>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/ubb/scs/map/repository/database/MessageDBRepository.java" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ubb/scs/map/repository/database/NotificationDBRepository.java" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ubb/scs/map/repository/database/UtilizatorDBRepository.java" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ubb/scs/map/utils/DBUtils.java" dialect="AZURE" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29603c-1cf8-498d-941e-9a1dee92a6c1/console_11.sql" dialect="GenericSQL" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29603c-1cf8-498d-941e-9a1dee92a6c1/console_12.sql" dialect="AZURE" />
+  </component>
+</project>
